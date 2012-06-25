@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="Author" content="Igor Rzegocki" />
+    <meta name="Copyright" content="Copyright (c) 2010 Igor Rzegocki" />
+
+    <meta name="Robots" content="index, follow" />
+    <meta name="Revisit-after" content="7 days" />
+
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link href="css/cimp.css" media="screen" rel="Stylesheet" type="text/css" />
+    <link href="css/datepicker.css" media="screen" rel="Stylesheet" type="text/css" />
+    <!--[if IE]>
+    <link rel="stylesheet" href="css/cimp-ie.css" />
+    <![endif]-->    
+    <!--[if IE 6]>
+    <link rel="stylesheet" href="css/cimp-ie6.css" />
+    <![endif]-->
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.i18n.js"></script>
+    <script type="text/javascript" src="js/jquery.datepicker.js"></script>
+    <script type="text/javascript" src="js/cimp.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="top">
+            <a id="logo" href="/">Centrum Informacji Medycyny Podróży - <span>Lekarz</span></a>
+            <ul id="menu">
+                <li class="first">Zalogowany jako <a href="">Dawid Leśniak</a></li>
+                <li><a class="submit-blue logout-blue" href=""><span>Wyloguj</span></a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="photos"></div>
+            <ul id="tabs">
+                <li class="m1 selected left selected-left"><a href=""><span>Przygotowania pacjenta do podróży</span></a></li>
+                <li class="m2"><a href=""><span>Szczepienia ochronne</span></a></li>
+                <li class="m3"><a href=""><span>Leki na malarię</span></a></li>
+                <li class="m4 right"><a href=""><span>Schemat postępowania z pacjentem</span></a></li>
+            </ul>
+            <div class="column-left">
+                <div id="leftmenu">
+                    <ul>
+                        <li class="left"><a href=""><span class="sm1">Niezbędnik lekarza</span></a></li>
+                        <li><a href=""><span class="sm2">Księgarnia medyczna</span></a></li>
+                        <li><a href=""><span class="sm3">Medycyna w Internecie</span></a></li>
+                        <li class="selected"><a href=""><span class="sm4">Zjazdy i konferencje</span></a></li>
+                        <li><a href=""><span class="sm5">Prezentacje</span></a></li>
+                        <li class="right"><a href=""><span class="sm6">Serwis dla pacjentów</span></a></li>
+                    </ul>
+                </div>
+                <div class="infobox">
+                    <div class="content">
+                        <cite>Zalogowany jako <a href="">Dawid Leśniak</a></cite>
+                        <strong>960 pkt</strong>
+                        <a href="">zobacz nagrody</a>
+                        <a class="submit logout" href=""><span>Wyloguj</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column-right">
+                <div class="article">
+                    <h2>Zjazdy i konferencje</h2>
+                    <cite><a href="">Cimp.pl</a> &raquo; <a href="">Zjazdy i konferencje</a></cite>
+                    <form action="" method="get">
+                        <fieldset class="violet">
+                            <label for="meetingtype">Wyszukaj zjazdy i konferencje:</label>
+                            <div class="select">
+                                <span></span>
+                                <select name="meetingtype" id="meetingtype">
+                                    <option value="all">Wszystkie</option>
+                                    <option value="warsaw">Warszawa</option>
+                                </select>
+                            </div>
+                            <input type="text" name="meetingtimefrom" id="meetingtimefrom" class="calendar" value="Data od" />
+                            <input type="text" name="meetingtimeto" id="meetingtimeto" class="calendar" value="Data do" />
+                        </fieldset>
+                    </form>
+                    <div id="meeting-results">
+                        <ul>
+                            <li class="first">
+                                <h5><a href="">Nazwa konferencji, Nulla imperd</a></h5>
+                                <dl>
+                                    <dt>
+                                        <cite>20.04.2011 - Warszawa</cite>
+                                        Start godzina: 18:00
+                                        <a class="submit-blue" href=""><span>Przejdź do strony</span></a>
+                                    </dt>
+                                    <dd>
+                                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui,
+                                        non felis. Maeorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
+                                        lectus felis, Nalesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
+                                        urna.</p>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <h5><a href="">Nazwa konferencji, Nulla imperd</a></h5>
+                                <dl>
+                                    <dt>
+                                        <cite>20.04.2011 - Warszawa</cite>
+                                        Start godzina: 18:00
+                                        <a class="submit-blue" href=""><span>Przejdź do strony</span></a>
+                                    </dt>
+                                    <dd>
+                                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui,
+                                        non felis. Maeorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
+                                        lectus felis, Nalesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
+                                        urna.</p>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <h5><a href="">Nazwa konferencji, Nulla imperd</a></h5>
+                                <dl>
+                                    <dt>
+                                        <cite>20.04.2011 - Warszawa</cite>
+                                        Start godzina: 18:00
+                                        <a class="submit-blue" href=""><span>Przejdź do strony</span></a>
+                                    </dt>
+                                    <dd>
+                                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui,
+                                        non felis. Maeorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
+                                        lectus felis, Nalesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
+                                        urna.</p>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <h5><a href="">Nazwa konferencji, Nulla imperd</a></h5>
+                                <dl>
+                                    <dt>
+                                        <cite>20.04.2011 - Warszawa</cite>
+                                        Start godzina: 18:00
+                                        <a class="submit-blue" href=""><span>Przejdź do strony</span></a>
+                                    </dt>
+                                    <dd>
+                                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui,
+                                        non felis. Maeorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
+                                        lectus felis, Nalesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
+                                        urna.</p>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul id="small-footer">
+                <li><a href="">Nota prawna</a></li>
+                <li><a href="">Regulamin</a></li>
+                <li><a href="">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        <address>
+            <span>Serwis wspierany przez firmę <a class="gsk" href="">GlaxoSmithKline</a></span>
+            &copy; 2011 Copyright by Active Pharma Sp. z o.o.
+        </address>
+    </div>
+</body>
+</html>

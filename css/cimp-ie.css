@@ -1,0 +1,91 @@
+button {
+    overflow: visible;
+}
+
+#tabs li a {
+    cursor: pointer;
+}
+
+#tabs li a span {
+    text-indent: -1000em;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+#tabs li.m1 a span {
+    width: 198px;
+    background-image: url(../img/m1.png);   
+}
+
+#tabs li.m2 a span {
+    width: 118px;
+    background-image: url(../img/m2.png);   
+}
+
+#tabs li.m3 a span {
+    width: 84px;
+    background-image: url(../img/m3.png);   
+}
+
+#tabs li.m4 a span {
+    width: 198px;
+    background-image: url(../img/m4.png);   
+}
+
+#content #leftmenu ul li a span {
+    text-indent: -1000em;
+    display: block;
+    width: auto;
+    height: 38px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#content #leftmenu ul li a span.sm1 {
+    background-image: url(../img/sm1.png);
+}
+
+#content #leftmenu ul li a span.sm2 {
+    background-image: url(../img/sm2.png);
+}
+
+#content #leftmenu ul li a span.sm3 {
+    background-image: url(../img/sm3.png);
+}
+
+#content #leftmenu ul li a span.sm4 {
+    background-image: url(../img/sm4.png);
+}
+
+#content #leftmenu ul li a span.sm5 {
+    background-image: url(../img/sm5.png);
+}
+
+#content #leftmenu ul li a span.sm6 {
+    background-image: url(../img/sm6.png);
+}
+
+#content #leftmenu ul li a:hover span.sm1 {
+    background-image: url(../img/sh1.png);
+}
+
+#content #leftmenu ul li a:hover span.sm2 {
+    background-image: url(../img/sh2.png);
+}
+
+#content #leftmenu ul li a:hover span.sm3 {
+    background-image: url(../img/sh3.png);
+}
+
+#content #leftmenu ul li a:hover span.sm4 {
+    background-image: url(../img/sh4.png);
+}
+
+#content #leftmenu ul li a:hover span.sm5 {
+    background-image: url(../img/sh5.png);
+}
+
+#content #leftmenu ul li a:hover span.sm6 {
+    background-image: url(../img/sh6.png);
+}

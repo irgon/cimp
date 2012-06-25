@@ -1,0 +1,878 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, select, button
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border: none;
+    list-style: none;
+}
+
+@font-face {
+    font-family: "MyriadProCondIt";
+    src: url(/fonts/myriadpro-condit.eot);
+}
+
+@font-face {
+    font-family: "MyriadProCondIt";
+    src: url(../fonts/myriadpro-condit.ttf);
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #204285;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button::-moz-focus-inner {
+    border: 0 none;
+    padding: 0;
+}
+
+button {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}
+
+a.submit,
+button.submit,
+a.submit-blue,
+button.submit-blue {
+    height: 25px;
+    border: none;
+    display: block;
+    float: left;
+    background: url(../img/submit-right.png) no-repeat;
+    background-position: right top;
+    padding: 0 2px 0 0;
+    font-weight: normal !important;
+    cursor: pointer;
+}
+
+a.submit span,
+button.submit div,
+a.submit-blue span,
+button.submit-blue div {
+    padding: 0 20px 0 22px;
+    background: url(../img/submit-left.png) no-repeat;
+    background-position: left top;
+    height: 25px;
+    line-height: 25px;
+    color: #2d4a8b;
+    display: block;
+}
+
+a.submit-hover,
+button.submit-hover,
+a.submit:hover,
+button.submit:hover,
+a.submit-blue:hover,
+button.submit-blue:hover {
+    background-position: right -25px;
+    text-decoration: none;
+}
+
+a.submit-blue,
+button.submit-blue {
+    background-image: url(../img/submit-right-blue.png);
+}
+
+a.submit-hover span,
+button.submit-hover div,
+a.submit:hover span,
+button.submit:hover div,
+a.submit-blue:hover span,
+button.submit-blue:hover div {
+    background-position: left -25px;
+}
+
+a.submit-blue span,
+button.submit-blue div {
+    background-image: url(../img/submit-left-blue.png);
+    color: #ffffff;
+}
+
+a.submit-hover span,
+button.submit-hover div,
+a.submit:hover span,
+button.submit:hover div {
+    color: #ffffff;
+}
+
+a.logout,
+a.logout-blue {
+    padding: 0 19px 0 0;
+    background-image: url(../img/submit-logout.png);
+}
+
+a.logout span,
+a.logout-blue span {
+    padding: 0 8px 0 22px;
+}
+
+a.logout-blue {
+    background-image: url(../img/submit-logout-blue.png);
+}
+
+input {
+    width: 180px;
+    height: 25px;
+    padding: 0 5px;
+    background: url(../img/input.png) no-repeat;
+    line-height: 25px;
+    color: #065452;
+}
+
+input:focus {
+    background-position: left -25px;
+}
+
+div.select {
+    float: left;
+}
+
+div.select,
+div.select span {
+    position: relative;
+    width: 153px;
+    height: 25px;
+    overflow: hidden;
+    display: block;
+}
+
+
+#wrapper #content div.select span {
+    background: url(../img/select.png) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    line-height: 25px;
+    padding: 0 5px;
+    width: 143px;
+    color: #065452;
+}
+
+div.select select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 153px;
+    height: 25px;
+    opacity: 0;
+    filter: alpha(opacity=0.01);
+}
+
+input.calendar {
+    width: 125px;
+    padding: 0 5px;
+    height: 25px;
+    line-height: 25px;
+    color: #065452;
+    background: url(../img/meeting.png) no-repeat;
+    float: left;
+    margin: 0 0 0 10px;
+}
+
+dl.form {
+    overflow: hidden;
+}
+
+dl.form dt {
+    width: 115px;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    clear: left;
+    margin: 0 0 3px 0;
+    padding: 6px 0;
+}
+
+dl.form dd {
+    float: left;
+    margin: 0 0 3px 0;
+    padding: 6px;
+    width: 415px;
+}
+
+body.login dl.form dd {
+    width: auto;
+}
+
+dl.form span.info {
+    display: none;
+    margin: 0 0 0 5px;
+}
+
+dl.form dd.invalid {
+    background: url(../img/validator.png) no-repeat;
+}
+
+dl.form dd.invalid span.info {
+    display: inline;
+}
+
+body {
+    background: #ffffff url(../img/bg.jpg) no-repeat;
+    background-position: center top;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+    color: #666666;
+    min-width: 1000px;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    width: 1042px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#wrapper #top {
+    overflow: hidden;
+    padding: 0 41px;
+}
+
+#wrapper #top #logo {
+    width: 251px;
+    padding: 92px 0 0 0;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    background: url(../img/logo.png) no-repeat;
+    display: block;
+    margin: 15px 0 0 21px;
+    float: left;
+}
+
+#wrapper #top #logo span {
+    position: absolute;
+    top: 14px;
+    right: 21px;
+    display: block;
+    font-size: 11px;
+    color: #ffffff;
+    font-style: italic;
+    width: 74px;
+}
+
+#wrapper #top #menu {
+    float: right;
+    margin: 16px -16px 0 0;
+}
+
+#wrapper #top #menu li {
+    color: #ffffff;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 14px;
+    background: url(../img/menu-separator.png) no-repeat;
+    background-position: left center;
+}
+
+#wrapper #top #menu li.first {
+    background: none;
+}
+
+#wrapper #top #menu li a {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#content {
+    position: relative;
+    padding: 187px 51px 0;
+    background: url(../img/content-top.png) no-repeat;
+    background-position: center 177px;
+    overflow: hidden;
+}
+
+#content #photos {
+    display: block;
+    width: 499px;
+    height: 256px;
+    background: url(../img/photos.png) no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#content #tabs {
+    background: url(../img/tabs.png) no-repeat;
+    position: relative;
+    height: 48px;
+    padding: 0 0 1px 0;
+    margin: 0 0 19px 0;
+}
+
+#tabs li {
+    display: block;
+    height: 48px;
+    float: left;
+    margin: 0 -1px 0 0;
+}
+
+#tabs li a {
+    font-family: "MyriadProCondIt", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 18px;
+    border-left: solid 1px transparent;
+    border-right: solid 1px transparent;
+}
+
+#tabs li.selected a,
+#tabs li a:hover {
+    background: url(../img/tabs.png) no-repeat;
+    background-position: -100px -49px;
+    border-left: solid 1px #4569b0;
+    border-right: solid 1px #4569b0;
+    text-decoration: none;
+}
+
+#tabs li.selected.left a,
+#tabs li.selected-left a,
+#tabs li.left a:hover {
+    background-position: 0px -49px;
+    border-left: solid 1px transparent;
+}
+
+#tabs li.selected.right a,
+#tabs li.selected-right a,
+#tabs li.right a:hover {
+    border-right: solid 1px transparent;
+}
+
+#content div.column-left {
+    width: 220px;
+    float: left;
+    margin: 0 10px 40px 0;
+}
+
+#content #leftmenu {
+    width: 220px;
+}
+
+#content #leftmenu ul {
+    display: block;
+    width: 220px;
+}
+
+#content #leftmenu ul li {
+    height: 39px;
+    width: 218px;
+    background: url(../img/leftmenu-bg.png) repeat-x;
+    border-bottom: solid 1px #e3e3e3;
+    border-left: solid 1px #e3e3e3;
+    border-right: solid 1px #e3e3e3;
+    cursor: pointer;
+}
+
+#content #leftmenu ul li.left {
+    height: 43px;
+    background: none;
+}
+
+#content #leftmenu ul li.left a {
+    border-top: none;
+    height: 39px;
+    padding: 4px 0 0 20px;
+    background: url(../img/leftmenu-top.png) no-repeat;
+}
+
+#content #leftmenu ul li.right {
+    background: none;
+}
+
+#content #leftmenu ul li.right a {
+    border-top: none;
+    background: url(../img/leftmenu-bottom.png) no-repeat;
+    height: 39px;
+}
+#content #leftmenu ul li.right {
+    border-bottom: none;
+}
+
+#content #leftmenu ul li a {
+    display: block;
+    height: 38px;
+    padding: 0 0 0 20px;
+    line-height: 38px;
+    font-family: "MyriadProCondIt", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #204285;
+    background: url(../img/leftmenu-arrow.png) no-repeat;
+    background-position: 11px center;
+    border-top: solid 1px #f5f5f5;
+}
+
+#content #leftmenu ul li.selected a,
+#content #leftmenu ul li a:hover {
+    background-color: #204285;
+    border-top: solid 1px #204285;
+    background-image: url(../img/leftmenu-arrow-hover.png);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#content #leftmenu ul li.selected-left a,
+#content #leftmenu ul li.left a:hover {
+    background: url(../img/leftmenu-top-hover.png) no-repeat;
+    border-top: none;
+}
+
+#content #leftmenu ul li.selected-right a,
+#content #leftmenu ul li.right a:hover {
+    background: url(../img/leftmenu-bottom-hover.png) no-repeat;
+    border-bottom: none;
+}
+
+#content div.infobox {
+    padding: 0 0 2px 0;
+    background: url(../img/infobox-bottom.png) no-repeat;
+    background-position: left bottom;
+    margin: 17px 0 0 0;
+}
+
+#content div.infobox div.content {
+    background: url(../img/infobox-top.png) no-repeat;
+    padding: 23px 19px;
+    overflow: hidden;
+    position: relative;
+}
+
+#content div.infobox cite {
+    font-style: normal;
+    display: block;
+    margin: 0 0 20px;
+}
+
+#content div.infobox cite a {
+    font-size: 14px;
+    color: #204285;
+    font-weight: bold;
+    display: block;
+}
+
+#content div.infobox strong {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+
+#content div.infobox a.submit {
+    position: absolute;
+    bottom: 24px;
+    right: 8px;
+}
+
+#content div.column-right {
+    overflow: hidden;
+    background: #ffffff url(../img/content-right-top.png) no-repeat;
+    width: 690px;
+    padding: 10px 10px 0;
+}
+
+#content div.header {
+    padding: 19px 0 0 274px;
+    height: 183px;
+    background: url(../img/header-top.png) no-repeat;
+    margin: 0 0 34px;
+}
+
+#content h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 15px;
+}
+
+#content div.header p {
+    margin: 0 0 20px;
+}
+
+#content div.article {
+    padding: 10px 10px 0;
+    margin: 0 0 40px 0;
+}
+
+#content div.article h2 {
+    margin: 0 0 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#content div.article h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #707070;
+    padding: 0 0 7px;
+    margin: 20px 0 7px;
+    border-bottom: solid 1px #ececec;
+}
+
+#content div.article cite {
+    font-size: 10px;
+    font-style: normal;
+    display: block;
+    margin: 0 0 6px;
+}
+
+#content div.article cite a {
+    color: #666666;
+}
+
+#content div.article p.short {
+    width: 530px;
+}
+
+#content div.article a.more {
+    display: block;
+}
+
+#content ul.chapters li {
+    width: 198px;
+    height: 175px;
+    padding: 127px 11px 0;
+    float: left;
+    margin: 0 0 0 15px;
+    position: relative;
+}
+
+#content ul.chapters li.world {
+    background: url(../img/chapters-world.png) no-repeat;
+    margin: 0;
+}
+
+#content ul.chapters li.dict {
+    background: url(../img/chapters-dict.png) no-repeat;
+}
+
+#content ul.chapters li.jungle {
+    background: url(../img/chapters-jungle.png) no-repeat;
+}
+
+#content ul.chapters li h3 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #102f71;
+    margin: 0 0 11px;
+}
+
+#content ul.chapters li h3 a:hover {
+    text-decoration: none;
+}
+
+#content ul.chapters li a.submit {
+    position: absolute;
+    left: 11px;
+    bottom: 23px;
+}
+
+#content ul.biglinklist li {
+    overflow: hidden;
+    border-top: solid 1px #ececec;
+    padding: 25px 7px 29px 0;
+}
+
+#content ul.biglinklist li.first {
+    border-top: none;
+}
+
+#content ul.biglinklist li a.img {
+    float: left;
+    margin: 7px 31px 0 0;
+    display: block;
+    width: 250px;
+    text-align: center;
+}
+
+#content ul.biglinklist li h5 a {
+    font-weight: bold;
+    font-size: 14px;
+    color: #204285;
+}
+
+#content ul.biglinklist li div {
+    overflow: hidden;
+}
+
+#content ul.biglinklist li h3 {
+    font-size: 12px;
+    color: #666666;
+    font-weight: normal;
+    margin: 0 0 21px;
+}
+
+#content ul.biglinklist li p {
+    margin: 0 0 21px;
+}
+
+#content ul.biglinklist li a.submit,
+#content ul.biglinklist li a.submit-blue {
+    margin: 0 10px 0 0;
+}
+
+#content fieldset.violet {
+    width: 640px;
+    height: 25px;
+    padding: 15px;
+    background: url(../img/fieldset.png) no-repeat;
+    margin: 11px 0;
+    line-height: 25px;
+}
+
+#content fieldset button.submit-blue {
+    float: right;
+}
+
+#content fieldset label {
+    float: left;
+    margin: 0 25px 0 0;
+    color: #065452;
+}
+
+#content #regiosearch,
+#content #dictword {
+    width: 493px;
+    padding: 0 10px;
+    line-height: 25px;
+    height: 25px;
+    background: url(../img/dictword.png) no-repeat;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    float: left;
+}
+
+#content #regiosearch {
+    width: 423px;
+    background: url(../img/regiosearch.png) no-repeat;
+    color: #82a9a8;
+}
+
+#content #dict-results ul li {
+    border-top: solid 1px #ececec;
+    padding: 17px 17px 7px;
+}
+
+#content #dict-results ul li.first {
+    border: none;
+}
+
+#content #dict-results h4 strong {
+    color: #000000;
+}
+
+#content #dict-results ul li p {
+    overflow: hidden;
+}
+
+#content #dict-results ul li p cite {
+    font-size: 12px;
+    float: right;
+}
+
+#content #meeting-results h5 {
+    margin: 0 0 8px;
+}
+
+#content #meeting-results h5 a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #204285;
+}
+
+#content #meeting-results ul li {
+    padding: 26px 35px 34px 5px;
+    border-top: solid 1px #ececec;
+}
+
+#content #meeting-results ul li.first {
+    border: none;
+}
+
+#content #meeting-results dl,
+#content #meeting-results dl dd {
+    overflow: hidden;
+}
+
+#content #meeting-results dl dt {
+    float: left;
+    width: 205px;
+}
+
+#content #meeting-results dl dt cite {
+    margin: 0;
+    font-size: 12px;
+    display: block;
+}
+
+#content #meeting-results dl dt a {
+    margin: 8px 0 0 0;
+}
+
+#content div.column-main {
+    width: 670px;
+    background: #ffffff url(../img/content-main-top.png) no-repeat;
+    background-position: left top;
+    padding: 20px 135px 0;
+}
+
+#content div.column-main form {
+    width: 670px;
+    padding: 37px 0;
+    display: block;
+    border-top: solid 1px #ececec;
+    border-bottom: solid 1px #ececec;
+    margin: 10px 0 30px;
+}
+
+#content div.column-main form div.register {
+    width: 250px;
+    float: right;
+    border-left: solid 1px #ececec;
+    padding: 0 0 0 30px;
+}
+
+#content div.column-main form div.register strong {
+    display: block;
+    margin: 20px 0 10px;
+}
+
+#content div.column-main form div.register p {
+    margin: 0 0 30px;
+}
+
+#content div.column-main form p,
+#content div.column-main form button.submit-blue {
+    margin: 0 0 0 115px;
+    clear: left;
+}
+
+#content div.column-main form button.submit-blue {
+    float: left;
+    margin: 0 0 20px 121px;
+}
+
+#content div.column-main p.verifiers {
+    width: 520px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#content div.column-main ul.verifiers {
+    margin: 25px 136px 130px;
+    overflow: hidden;
+}
+
+#content div.column-main ul.verifiers li {
+    display: block;
+    float: left;
+    height: 65px;
+    text-indent: -1000em;
+    overflow: hidden;
+}
+
+#content div.column-main ul.verifiers li a {
+    display: block;
+    height: 65px;
+}
+
+#content div.column-main ul.verifiers li.nil {
+    width: 121px;
+    margin: 0 86px 0 0;
+    background: url(../img/v-nil.png) no-repeat;
+}
+
+#content div.column-main ul.verifiers li.nil a {
+    width: 121px;
+}
+
+#content div.column-main ul.verifiers li.netdoctor {
+    width: 170px;
+    background: url(../img/v-netdoctor.png) no-repeat;
+}
+
+#content div.column-main ul.verifiers li.netdoctor a {
+    width: 170px;
+}
+
+#small-footer {
+    display: block;
+    height: 39px;
+    border-top: solid 1px #ececec;
+    border-bottom: solid 1px #ececec;
+    margin: 28px 0 0;
+    clear: both;
+}
+
+#small-footer li {
+    float: left;
+    height: 39px;
+}
+
+#small-footer li a {
+    display: block;
+    height: 39px;
+    line-height: 39px;
+    color: #1d3c82;
+    padding: 0 15px;
+}
+
+#small-footer li a:hover {
+    text-decoration: none;
+    background: #daddea;
+}
+
+#footer {
+    height: 123px;
+    background: #091d71 url(../img/footer.png) no-repeat;
+    background-position: center top;
+    margin: 20px 0 0 0;
+}
+
+#footer address {
+    display: block;
+    width: 930px;
+    padding: 36px 10px 0 20px;
+    font-style: normal;
+    margin: 0 auto;
+    color: #c3c7dc;
+    font-size: 11px;
+}
+
+#footer address span {
+    float: right;
+    display: block;
+    height: 29px;
+}
+
+#footer address span a.gsk {
+    display: block;
+    float: right;
+    width: 79px;
+    height: 29px;
+    text-indent: -1000em;
+    overflow: hidden;
+    background: url(../img/gsk.png) no-repeat;
+    margin: 0 0 0 5px;
+    position: relative;
+    top: -12px;
+}

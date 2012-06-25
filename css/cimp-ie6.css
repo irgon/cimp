@@ -1,0 +1,178 @@
+a.submit,
+button.submit,
+a.submit-blue,
+button.submit-blue {
+    background-image: url(../img/submit-right.gif);
+}
+
+a.submit span,
+button.submit div,
+a.submit-blue span,
+button.submit-blue div {
+    background-image: url(../img/submit-left.gif);
+    float: left;
+}
+
+a.submit-blue,
+button.submit-blue {
+    background-image: url(../img/submit-right-blue.gif);
+}
+
+
+a.submit-blue span,
+button.submit-blue div {
+    background-image: url(../img/submit-left-blue.gif);
+}
+
+a.logout,
+a.logout-blue {
+    background-image: url(../img/submit-logout.gif);
+}
+
+a.logout-blue {
+    background-image: url(../img/submit-logout-blue.gif);
+}
+
+#wrapper #top {
+    zoom: 1;
+}
+
+#wrapper #top #logo {
+    background-image: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/logo.png",sizingMethod="crop");
+}
+
+
+#wrapper #top #menu {
+    width: 330px;
+}
+
+#wrapper #top #menu li a.logout-blue span {
+    float: right;
+}
+
+#content #photos {
+    background-image: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/photos.png",sizingMethod="crop");
+}
+
+#tabs li a {
+    float: left;
+}
+
+#tabs li.m1 a span {
+    background-image: url(../img/m1.gif);   
+}
+
+#tabs li.m2 a span {
+    background-image: url(../img/m2.gif);   
+}
+
+#tabs li.m3 a span {
+    background-image: url(../img/m3.gif);   
+}
+
+#tabs li.m4 a span {
+    background-image: url(../img/m4.gif);
+}
+
+#content div.column-left,
+#content div.column-right {
+    zoom: 1;
+    position: relative;
+    float: left;
+}
+
+#content div.infobox,
+#content div.infobox div.content {
+    zoom: 1;
+}
+
+#small-footer li a {
+    float: left;
+}
+
+#footer span {
+    width: 240px;
+}
+
+#footer address span a.gsk {
+    background-image: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/gsk.png",sizingMethod="crop");
+}
+
+#footer address span a.gsk {
+    top: -30px;
+}
+
+#content ul.biglinklist li {
+    zoom: 1;
+    position: relative;
+}
+
+#content #leftmenu ul li a span.sm1 {
+    background-image: url(../img/sm1.gif);
+}
+
+#content #leftmenu ul li a span.sm2 {
+    background-image: url(../img/sm2.gif);
+}
+
+#content #leftmenu ul li a span.sm3 {
+    background-image: url(../img/sm3.gif);
+}
+
+#content #leftmenu ul li a span.sm4 {
+    background-image: url(../img/sm4.gif);
+}
+
+#content #leftmenu ul li a span.sm5 {
+    background-image: url(../img/sm5.gif);
+}
+
+#content #leftmenu ul li a span.sm6 {
+    background-image: url(../img/sm6.gif);
+}
+
+#content #leftmenu ul li.selected a span.sm1,
+#content #leftmenu ul li a:hover span.sm1 {
+    background-image: url(../img/sh1.gif);
+}
+
+#content #leftmenu ul li.selected a span.sm2,
+#content #leftmenu ul li a:hover span.sm2 {
+    background-image: url(../img/sh2.gif);
+}
+
+#content #leftmenu ul li.selected a span.sm3,
+#content #leftmenu ul li a:hover span.sm3 {
+    background-image: url(../img/sh3.gif);
+}
+
+#content #leftmenu ul li.selected a span.sm4,
+#content #leftmenu ul li a:hover span.sm4 {
+    background-image: url(../img/sh4.gif);
+}
+
+#content #leftmenu ul li.selected a span.sm5,
+#content #leftmenu ul li a:hover span.sm5 {
+    background-image: url(../img/sh5.gif);
+}
+
+#content #leftmenu ul li.selected a span.sm6,
+#content #leftmenu ul li a:hover span.sm6 {
+    background-image: url(../img/sh6.gif);
+}
+
+#content div.column-main form p,
+#content div.column-main form button.submit-blue {
+    margin: 0 0 0 61px;
+}
+
+#content div.column-main form button.submit-blue {
+    margin: 0 0 20px 61px;
+}
+
+#content ul.biglinklist li div {
+    zoom: 1;
+}
